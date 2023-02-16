@@ -34,6 +34,15 @@ $ python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train
 --hyp : 하이퍼-파라미터 설정
 --sync-bn : SyncBatchNorm
 
+## 검증 또는 테스트
+``` shell
+$ python test.py --data data/kcoco.yaml --img-size 640 --device 0 --batch-size 32 --weights runs/train/yolov7-kcoco6/weights/best.pt --name yolov7-kcoco --task val(test)
+```
+
+## 추론
+``` shell
+$ python detect.py --weights weights/yolov7_kcoco_training.pt --conf 0.5 --source inference/images/car.jpg
+```
 
 ## 참고
 [https://github.com/WongKinYiu/yolov7.git](https://github.com/WongKinYiu/yolov7.git)
