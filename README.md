@@ -12,9 +12,9 @@ $ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolk
 ```
 소스
 ``` shell
-$ conda create --name env python=3.9.16
-$ conda activate env
-$ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+$ git clone https://github.com/penguin46/yolov7_kcoco.git
+$ cd yolov7
+$ pip install -r requirements.txt
 ```
 
 ## 학습
@@ -22,6 +22,17 @@ $ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolk
 ``` shell
 $ python train.py --workers 8 --device 0 --batch-size 128 --data data/kcoco.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights '' --name yolov7-kcoco --hyp data/hyp.scratch.custom.yaml
 ```
+다중 GPU
+``` shell
+$ python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 128 --data data/kcoco.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights '' --name yolov7-kcoco --hyp data/hyp.scratch.custom.yaml
+```
+--nproc_per_node : 사용하려는 GPU 수를 지정함.
+--batch-size : 전체 배치 사이즈
+--data : 데이터 관련
+--img : 입력 이미지 사이즈
+--cfg : 모델 구조
+--hyp : 하이퍼-파라미터 설정
+--sync-bn : SyncBatchNorm
 
 
 ## 참고
