@@ -13,7 +13,7 @@ $ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolk
 소스
 ``` shell
 $ git clone https://github.com/penguin46/yolov7_kcoco.git
-$ cd yolov7
+$ cd yolov7_kcoco
 $ pip install -r requirements.txt
 ```
 
