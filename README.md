@@ -6,7 +6,7 @@
 ## Training
 단일 GPU
 ``` shell
-$ python train.py --workers 8 --device 0 --batch-size 128 --data data/kcoco.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights ‘’ --name yolov7-kcoco --hyp data/hyp.scratch.custom.yaml
+$ python train.py --workers 8 --device 0 --batch-size 128 --data data/kcoco.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights `` --name yolov7-kcoco --hyp data/hyp.scratch.custom.yaml
 ```
 
 
