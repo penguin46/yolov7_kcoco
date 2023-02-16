@@ -1,0 +1,24 @@
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ../datasets/kcoco/train2022.txt
+val: ../datasets/kcoco/val2022.txt  
+test: ../datasets/kcoco/test2022.txt  
+
+# number of classes
+nc: 150
+
+# class names
+names: ['person', 'bicycle', 'car', 'motorcycle', 'scooter', 'bus', 'truck', 'traffic light', 'fire hydrant', 
+        'fire extinguisher', 'sign', 'trash bin', 'bench', 'roof', 'bird', 'cat', 'dog', 'chicken', 'backpack', 
+        'umbrella', 'handbag', 'tie', 'suitcase', 'muffler', 'hat', 'ball', 'poles', 'plate skis', 'board', 'drone', 
+        'pilates equipment', 'treadmill', 'dumbbell', 'golf club', 'Billiards cue', 'skating shoes', 'tennis racket', 
+        'badminton racket', 'goalpost', 'basketball hoop', 'carabiner', 'table tennis racket', 'rice cooker', 'gas stove', 
+        'pot', 'pan', 'microwave', 'toaster', 'knives', 'chopping boards', 'ladle', 'silicon spatula', 'rice spatula', 
+        'vegetable peeler', 'box grater', 'scissors', 'bowl', 'cutlery', 'plate', 'side dish', 'tray', 'mug', 'refrigerator', 
+        'dish washer', 'espresso machine', 'purifier', 'banana', 'apple', 'grape', 'pear', 'melon', 'cucumber', 'watermelon', 
+        'orange', 'peach', 'strawberry', 'plum', 'persimmon', 'lettuce', 'cabbage', 'radish', 'perilla leaf', 'garlic', 'onion', 
+        'spring onion', 'carrot', 'corn', 'potato', 'sweet potato', 'egg plant', 'tomato', 'pumpkin', 'squash', 'chili', 'pimento', 
+        'sandwich', 'hamburger', 'hotdog', 'pizza', 'donut', 'cake', 'white bread', 'icecream', 'ttoke', 'tteokbokki', 'kimchi', 'gimbap', 
+        'sushi', 'mandu', 'gonggibap', 'couch', 'mirror', 'window', 'table', 'lamp', 'door', 'chair', 'bed', 'toilet bowl', 'washstand', 
+        'book', 'clock', 'doll', 'hair drier', 'toothbrush', 'hair brush', 'tv', 'laptop', 'mouse', 'keyboard', 'cell phone', 'watch', 
+        'camera', 'speaker', 'fan', 'air conditioner', 'piano', 'Tambourine', 'Castanets', 'guitar', 'violin', 'flute', 'recorder', 'xylophone', 
+        'ocarina', 'thermometer', 'sphygmomanometer', 'blood glucose meter', 'defibrillator', 'massage gun']  # class names
