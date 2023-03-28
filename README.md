@@ -36,7 +36,7 @@ $ python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train
 
 ## 검증 또는 테스트
 ``` shell
-$ python test.py --data data/kcoco.yaml --img-size 640 --device 0 --batch-size 32 --weights runs/train/yolov7-kcoco6/weights/best.pt --name yolov7-kcoco --task val(test)
+$ python test.py --data data/kcoco.yaml --img-size 640 --device 0 --batch-size 32 --weights runs/train/yolov7-kcoco/weights/best.pt --name yolov7-kcoco --task val(test)
 ```
 
 ## 추론
